@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paiol — o álbum da família na fazenda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <button class="brand" data-view="capa" type="button">
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=200&q=80" alt="">
+      <span>
+        <span class="brand-name">Paiol</span>
+        <small>Família · Fazenda · Foto</small>
+      </span>
+    </button>
+    <nav class="nav">
+      <button data-view="capa" class="active" type="button">Capa</button>
+      <button data-view="fazenda" type="button">A fazenda</button>
+      <button data-view="familia" type="button">Gente</button>
+      <button data-view="arvore" type="button">Árvore</button>
+      <button data-view="tempo" type="button">Tempo</button>
+      <button data-view="albuns" type="button">Álbuns</button>
+      <button data-view="causos" type="button">Causos</button>
+      <button data-view="guardar" type="button">Guardar foto</button>
+    </nav>
+  </header>
+  <main>
+    <section class="view active" id="capa">
+      <div class="hero">
+        <img class="cover" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80" alt="Sede da fazenda">
+        <div class="hero-copy">
+          <div class="eyebrow">Fazenda Santa Luzia · volume I</div>
+          <h1>O que a terra viu,<br>a família guarda.</h1>
+          <p class="lede">Paiol é o álbum da casa: gente, sede, gado, mesa e o terreiro no meio.</p>
+        </div>
+      </div>
+    </section>
+    <section class="view" id="fazenda">
+      <div class="section-head"><div class="eyebrow">O chão</div><h2>A fazenda também é parente.</h2><p>A sede, a estrada, a manga, o curral — cada canto segura um pedaço da família.</p></div>
+      <div class="farm-hero card">
+        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80" alt="Estrada">
+        <div class="meta"><h3>Fazenda Santa Luzia</h3><div class="role">Sede · cerrado · estrada de chão</div><p>Dados de demonstração. Depois entra o nome verdadeiro da propriedade.</p></div>
+      </div>
+      <div class="places">
+        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80" alt=""><div class="meta"><h3>A sede</h3><p>Varanda e telha.</p></div></article>
+        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>O campo</h3><p>O serviço do dia.</p></div></article>
+        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>A cozinha</h3><p>Café e fubá.</p></div></article>
+        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1543353071-087092ec393f?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>A mesa</h3><p>Onde a família cabe.</p></div></article>
+      </div>
+    </section>
+    <section class="view" id="familia"><div class="section-head"><div class="eyebrow">As pessoas</div><h2>Gente da casa.</h2><p>Cada ficha leva foto, parentesco e um parágrafo.</p></div><div class="grid people" id="people-grid"></div></section>
+    <section class="view" id="arvore"><div class="section-head"><div class="eyebrow">O sangue</div><h2>Quem plantou. Quem ficou.</h2><p>Clica na pessoa pra abrir a ficha.</p></div><div class="tree" id="tree"></div></section>
+    <section class="view" id="tempo"><div class="section-head"><div class="eyebrow">Os anos</div><h2>A fazenda no tempo.</h2></div><div class="timeline" id="timeline"></div></section>
+    <section class="view" id="albuns"><div class="section-head"><div class="eyebrow">As fotos</div><h2>O alvo é este: o álbum.</h2></div><div class="toolbar" id="album-filters"></div><div class="grid photos" id="photo-grid"></div></section>
+    <section class="view" id="causos"><div class="section-head"><div class="eyebrow">O que a foto não conta</div><h2>Causos da casa.</h2></div><div id="stories"></div></section>
+    <section class="view" id="guardar">
+      <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2><p>Manda uma imagem da fazenda, dá um título e escolhe o álbum.</p></div>
+      <form class="add" id="add-photo">
+        <label>Foto <input id="photo-file" type="file" accept="image/*" required></label>
+        <label>Título <input id="photo-title" type="text" placeholder="Ex.: Porteira depois da chuva" required></label>
+        <label>Legenda <textarea id="photo-caption" placeholder="Quem está na foto, ano, o que acontecia"></textarea></label>
+        <label>Álbum <select id="photo-album"><option>A Sede</option><option>O Campo</option><option>A Mesa</option><option>Gente da casa</option></select></label>
+        <button class="btn primary" type="submit">Guardar no paiol</button>
+      </form>
+    </section>
+  </main>
+  <div class="modal" id="modal"></div>
+  <div class="lightbox" id="lightbox"></div>
+  <script src="app.js"></script>
+</body>
+</html>
