@@ -13,10 +13,7 @@
   <header class="app-header">
     <button class="brand" data-view="capa" type="button">
       <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=200&q=80" alt="">
-      <span>
-        <span class="brand-name">Paiol</span>
-        <small>Família · Fazenda · Foto</small>
-      </span>
+      <span><span class="brand-name">Paiol</span><small>Família · Fazenda · Foto</small></span>
     </button>
     <nav class="nav">
       <button data-view="capa" class="active" type="button">Capa</button>
@@ -26,6 +23,7 @@
       <button data-view="tempo" type="button">Tempo</button>
       <button data-view="albuns" type="button">Álbuns</button>
       <button data-view="causos" type="button">Causos</button>
+      <button data-view="instrucoes" type="button">Instruções</button>
       <button data-view="guardar" type="button">Guardar foto</button>
     </nav>
   </header>
@@ -36,34 +34,56 @@
         <div class="hero-copy">
           <div class="eyebrow">Fazenda Santa Luzia · volume I</div>
           <h1>O que a terra viu,<br>a família guarda.</h1>
-          <p class="lede">Paiol é o álbum da casa: gente, sede, gado, mesa e o terreiro no meio.</p>
+          <p class="lede">Paiol é o álbum da casa. Foto entra com nome, ano e lugar.</p>
+          <button class="btn ghost" data-view="instrucoes" type="button">Como tirar a foto da capa</button>
         </div>
       </div>
     </section>
-    <section class="view" id="fazenda">
-      <div class="section-head"><div class="eyebrow">O chão</div><h2>A fazenda também é parente.</h2><p>A sede, a estrada, a manga, o curral — cada canto segura um pedaço da família.</p></div>
-      <div class="farm-hero card">
-        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80" alt="Estrada">
-        <div class="meta"><h3>Fazenda Santa Luzia</h3><div class="role">Sede · cerrado · estrada de chão</div><p>Dados de demonstração. Depois entra o nome verdadeiro da propriedade.</p></div>
+    <section class="view" id="instrucoes">
+      <div class="section-head">
+        <div class="eyebrow">Manual da casa</div>
+        <h2>Começa pela capa.</h2>
+        <p>A capa é a porteira do livro. Quem abre precisa reconhecer a fazenda em dois segundos.</p>
       </div>
-      <div class="places">
-        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80" alt=""><div class="meta"><h3>A sede</h3><p>Varanda e telha.</p></div></article>
-        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>O campo</h3><p>O serviço do dia.</p></div></article>
-        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>A cozinha</h3><p>Café e fubá.</p></div></article>
-        <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1543353071-087092ec393f?auto=format&fit=crop&w=1200&q=80" alt=""><div class="meta"><h3>A mesa</h3><p>Onde a família cabe.</p></div></article>
+      <article class="lesson featured">
+        <div class="lesson-kicker">Passo 1 · a foto que abre</div>
+        <h3>A capa não é retrato. É o chão.</h3>
+        <p>Grupo posado na frente da casa vira confraternização. Capa boa mostra a sede dentro da terra: telhado, terreiro, estrada, céu. Gente pode aparecer — pequena, de passagem.</p>
+        <ol class="steps">
+          <li><strong>Hora.</strong> Fim de tarde, sol de lado. Meio-dia mata cor. Manhã cedo também serve se o sereno ainda está no pasto.</li>
+          <li><strong>Distância.</strong> Afasta até caber casa + terreiro + um pedaço de campo. Se só cabe a parede, está perto demais.</li>
+          <li><strong>Pé no chão.</strong> Não fotografa do peito do carro. Desce e deixa o primeiro plano ser terra, capim ou estrada.</li>
+          <li><strong>Céu.</strong> Deixa horizonte. Fazenda sem céu parece lote.</li>
+          <li><strong>Celular.</strong> Limpa a poeira no vidro. Desliga o modo retrato. Liga a grade e põe a casa num terço, não no meio exato.</li>
+          <li><strong>Tira cinco, escolhe uma.</strong> Frente, estrada, manga, fim da luz. A capa é a que ainda funciona pequena.</li>
+        </ol>
+        <div class="do-dont">
+          <div><h4>Entra na capa</h4><ul><li>Sede ao entardecer</li><li>Estrada até o portão</li><li>Uma pessoa pequena no terreiro</li><li>Estação visível: poeira, lama ou verde</li></ul></div>
+          <div><h4>Não é capa</h4><ul><li>Selfie no capô</li><li>Drone sem chão reconhecível</li><li>Sol estourado no meio-dia</li><li>Filtro que muda a cor da terra</li></ul></div>
+        </div>
+        <p class="rule">Antes de guardar: ano, estação e quem tirou. “Foto da sede” não basta. “Sede, junho de 2026, fim de tarde, Clara na estrada” entra.</p>
+      </article>
+      <div class="lesson-grid">
+        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Gente</h3><p>Um de cada vez, ou dois. Luz na varanda, não flash. Pede o nome e a idade na hora.</p></article>
+        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Campo</h3><p>Gado + chão + céu. O serviço conta mais que o animal sozinho.</p></article>
+        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Mesa</h3><p>Antes de servir ou no meio. A forma, a jarra, a cadeira de mais: isso segura o ano.</p></article>
       </div>
     </section>
-    <section class="view" id="familia"><div class="section-head"><div class="eyebrow">As pessoas</div><h2>Gente da casa.</h2><p>Cada ficha leva foto, parentesco e um parágrafo.</p></div><div class="grid people" id="people-grid"></div></section>
-    <section class="view" id="arvore"><div class="section-head"><div class="eyebrow">O sangue</div><h2>Quem plantou. Quem ficou.</h2><p>Clica na pessoa pra abrir a ficha.</p></div><div class="tree" id="tree"></div></section>
+    <section class="view" id="fazenda">
+      <div class="section-head"><div class="eyebrow">O chão</div><h2>A fazenda também é parente.</h2></div>
+      <div class="farm-hero card"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80" alt=""><div class="meta"><h3>Fazenda Santa Luzia</h3><div class="role">Sede · cerrado</div></div></div>
+    </section>
+    <section class="view" id="familia"><div class="section-head"><div class="eyebrow">As pessoas</div><h2>Gente da casa.</h2></div><div class="grid people" id="people-grid"></div></section>
+    <section class="view" id="arvore"><div class="section-head"><div class="eyebrow">O sangue</div><h2>Quem plantou. Quem ficou.</h2></div><div class="tree" id="tree"></div></section>
     <section class="view" id="tempo"><div class="section-head"><div class="eyebrow">Os anos</div><h2>A fazenda no tempo.</h2></div><div class="timeline" id="timeline"></div></section>
     <section class="view" id="albuns"><div class="section-head"><div class="eyebrow">As fotos</div><h2>O alvo é este: o álbum.</h2></div><div class="toolbar" id="album-filters"></div><div class="grid photos" id="photo-grid"></div></section>
     <section class="view" id="causos"><div class="section-head"><div class="eyebrow">O que a foto não conta</div><h2>Causos da casa.</h2></div><div id="stories"></div></section>
     <section class="view" id="guardar">
-      <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2><p>Manda uma imagem da fazenda, dá um título e escolhe o álbum.</p></div>
+      <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2></div>
       <form class="add" id="add-photo">
         <label>Foto <input id="photo-file" type="file" accept="image/*" required></label>
-        <label>Título <input id="photo-title" type="text" placeholder="Ex.: Porteira depois da chuva" required></label>
-        <label>Legenda <textarea id="photo-caption" placeholder="Quem está na foto, ano, o que acontecia"></textarea></label>
+        <label>Título <input id="photo-title" type="text" required></label>
+        <label>Legenda <textarea id="photo-caption"></textarea></label>
         <label>Álbum <select id="photo-album"><option>A Sede</option><option>O Campo</option><option>A Mesa</option><option>Gente da casa</option></select></label>
         <button class="btn primary" type="submit">Guardar no paiol</button>
       </form>
