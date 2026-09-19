@@ -25,58 +25,55 @@
       <button data-view="causos" type="button">Causos</button>
       <button data-view="instrucoes" type="button">Instruções</button>
       <button data-view="guardar" type="button">Guardar foto</button>
+      <button data-view="casa" type="button">A casa</button>
     </nav>
   </header>
   <main>
     <section class="view active" id="capa">
       <div class="hero">
-        <img class="cover" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80" alt="Sede da fazenda">
+        <img class="cover" id="cover-img" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80" alt="">
         <div class="hero-copy">
-          <div class="eyebrow">Fazenda Santa Luzia · volume I</div>
+          <div class="eyebrow" id="cover-kicker">volume I</div>
           <h1>O que a terra viu,<br>a família guarda.</h1>
-          <p class="lede">Paiol é o álbum da casa. Foto entra com nome, ano e lugar.</p>
+          <p class="lede" id="cover-lede">Paiol é o álbum da casa.</p>
           <button class="btn ghost" data-view="instrucoes" type="button">Como tirar a foto da capa</button>
         </div>
       </div>
     </section>
     <section class="view" id="instrucoes">
-      <div class="section-head">
-        <div class="eyebrow">Manual da casa</div>
-        <h2>Começa pela capa.</h2>
-        <p>A capa é a porteira do livro. Quem abre precisa reconhecer a fazenda em dois segundos.</p>
-      </div>
+      <div class="section-head"><div class="eyebrow">Manual da casa</div><h2>Começa pela capa.</h2></div>
       <article class="lesson featured">
         <div class="lesson-kicker">Passo 1 · a foto que abre</div>
         <h3>A capa não é retrato. É o chão.</h3>
-        <p>Grupo posado na frente da casa vira confraternização. Capa boa mostra a sede dentro da terra: telhado, terreiro, estrada, céu. Gente pode aparecer — pequena, de passagem.</p>
         <ol class="steps">
-          <li><strong>Hora.</strong> Fim de tarde, sol de lado. Meio-dia mata cor. Manhã cedo também serve se o sereno ainda está no pasto.</li>
-          <li><strong>Distância.</strong> Afasta até caber casa + terreiro + um pedaço de campo. Se só cabe a parede, está perto demais.</li>
-          <li><strong>Pé no chão.</strong> Não fotografa do peito do carro. Desce e deixa o primeiro plano ser terra, capim ou estrada.</li>
-          <li><strong>Céu.</strong> Deixa horizonte. Fazenda sem céu parece lote.</li>
-          <li><strong>Celular.</strong> Limpa a poeira no vidro. Desliga o modo retrato. Liga a grade e põe a casa num terço, não no meio exato.</li>
-          <li><strong>Tira cinco, escolhe uma.</strong> Frente, estrada, manga, fim da luz. A capa é a que ainda funciona pequena.</li>
+          <li><strong>Hora.</strong> Fim de tarde, sol de lado.</li>
+          <li><strong>Distância.</strong> Casa + terreiro + campo.</li>
+          <li><strong>Pé no chão.</strong> Sai do capô.</li>
+          <li><strong>Céu.</strong> Deixa horizonte.</li>
+          <li><strong>Celular.</strong> Limpa a lente, desliga o modo retrato.</li>
+          <li><strong>Cinco fotos, uma capa.</strong></li>
         </ol>
-        <div class="do-dont">
-          <div><h4>Entra na capa</h4><ul><li>Sede ao entardecer</li><li>Estrada até o portão</li><li>Uma pessoa pequena no terreiro</li><li>Estação visível: poeira, lama ou verde</li></ul></div>
-          <div><h4>Não é capa</h4><ul><li>Selfie no capô</li><li>Drone sem chão reconhecível</li><li>Sol estourado no meio-dia</li><li>Filtro que muda a cor da terra</li></ul></div>
-        </div>
-        <p class="rule">Antes de guardar: ano, estação e quem tirou. “Foto da sede” não basta. “Sede, junho de 2026, fim de tarde, Clara na estrada” entra.</p>
+        <p class="rule">Legenda: ano, estação, quem tirou.</p>
       </article>
-      <div class="lesson-grid">
-        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Gente</h3><p>Um de cada vez, ou dois. Luz na varanda, não flash. Pede o nome e a idade na hora.</p></article>
-        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Campo</h3><p>Gado + chão + céu. O serviço conta mais que o animal sozinho.</p></article>
-        <article class="lesson"><div class="lesson-kicker">Depois da capa</div><h3>Mesa</h3><p>Antes de servir ou no meio. A forma, a jarra, a cadeira de mais: isso segura o ano.</p></article>
-      </div>
     </section>
     <section class="view" id="fazenda">
       <div class="section-head"><div class="eyebrow">O chão</div><h2>A fazenda também é parente.</h2></div>
-      <div class="farm-hero card"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80" alt=""><div class="meta"><h3>Fazenda Santa Luzia</h3><div class="role">Sede · cerrado</div></div></div>
+      <div class="farm-hero card"><img id="farm-img" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80" alt=""><div class="meta"><h3 id="farm-title">Sua fazenda</h3><div class="role" id="farm-place"></div><p id="farm-note"></p></div></div>
     </section>
-    <section class="view" id="familia"><div class="section-head"><div class="eyebrow">As pessoas</div><h2>Gente da casa.</h2></div><div class="grid people" id="people-grid"></div></section>
+    <section class="view" id="familia">
+      <div class="section-head"><div class="eyebrow">As pessoas</div><h2>Gente da casa.</h2></div>
+      <div class="toolbar"><button class="btn primary" type="button" data-view="casa">+ Pessoa</button></div>
+      <div class="grid people" id="people-grid"></div>
+      <p class="hint" id="people-empty" hidden>Ainda não tem gente no Volume I.</p>
+    </section>
     <section class="view" id="arvore"><div class="section-head"><div class="eyebrow">O sangue</div><h2>Quem plantou. Quem ficou.</h2></div><div class="tree" id="tree"></div></section>
     <section class="view" id="tempo"><div class="section-head"><div class="eyebrow">Os anos</div><h2>A fazenda no tempo.</h2></div><div class="timeline" id="timeline"></div></section>
-    <section class="view" id="albuns"><div class="section-head"><div class="eyebrow">As fotos</div><h2>O alvo é este: o álbum.</h2></div><div class="toolbar" id="album-filters"></div><div class="grid photos" id="photo-grid"></div></section>
+    <section class="view" id="albuns">
+      <div class="section-head"><div class="eyebrow">As fotos</div><h2>O alvo é este: o álbum.</h2></div>
+      <div class="toolbar" id="album-filters"></div>
+      <div class="grid photos" id="photo-grid"></div>
+      <p class="hint" id="photos-empty" hidden>Álbum vazio. Vai em Guardar foto.</p>
+    </section>
     <section class="view" id="causos"><div class="section-head"><div class="eyebrow">O que a foto não conta</div><h2>Causos da casa.</h2></div><div id="stories"></div></section>
     <section class="view" id="guardar">
       <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2></div>
@@ -85,10 +82,64 @@
         <label>Título <input id="photo-title" type="text" required></label>
         <label>Legenda <textarea id="photo-caption"></textarea></label>
         <label>Álbum <select id="photo-album"><option>A Sede</option><option>O Campo</option><option>A Mesa</option><option>Gente da casa</option></select></label>
+        <label class="check"><input id="photo-cover" type="checkbox"> Usar como capa do livro</label>
         <button class="btn primary" type="submit">Guardar no paiol</button>
       </form>
     </section>
+    <section class="view" id="casa">
+      <div class="section-head"><div class="eyebrow">O seu Paiol</div><h2>Aqui o álbum vira seu.</h2></div>
+      <form class="add" id="form-house">
+        <label>Nome da fazenda <input id="set-farm" required></label>
+        <label>Município / lugar <input id="set-place"></label>
+        <label>Sobrenome da família <input id="set-family"></label>
+        <label>Volume <input id="set-volume" placeholder="volume I"></label>
+        <button class="btn primary" type="submit">Salvar a casa</button>
+      </form>
+      <h3 class="block-title">Pessoa no Volume I</h3>
+      <form class="add" id="form-person">
+        <label>Nome <input id="p-name" required></label>
+        <label>Parentesco <input id="p-role" required></label>
+        <label>Anos <input id="p-years"></label>
+        <label>Um parágrafo <textarea id="p-bio"></textarea></label>
+        <label>Foto <input id="p-photo" type="file" accept="image/*"></label>
+        <button class="btn primary" type="submit">Guardar pessoa</button>
+      </form>
+      <h3 class="block-title">Marco no tempo</h3>
+      <form class="add" id="form-event">
+        <label>Ano <input id="e-year" required></label>
+        <label>Título <input id="e-title" required></label>
+        <label>O que mudou <textarea id="e-text"></textarea></label>
+        <button class="btn primary" type="submit">Guardar marco</button>
+      </form>
+      <h3 class="block-title">Causo</h3>
+      <form class="add" id="form-story">
+        <label>Título <input id="s-title" required></label>
+        <label>O causo <textarea id="s-text" required></textarea></label>
+        <label>Quem conta <input id="s-by"></label>
+        <label>Quando / onde <input id="s-when"></label>
+        <button class="btn primary" type="submit">Guardar causo</button>
+      </form>
+      <div class="toolbar wrap-gap">
+        <button class="btn" id="btn-backup" type="button">Baixar backup</button>
+        <label class="btn">Trazer backup<input id="import-backup" type="file" accept="application/json" hidden></label>
+        <button class="btn" id="btn-start-mine" type="button">Começar o meu álbum</button>
+      </div>
+    </section>
   </main>
+  <div class="setup" id="setup">
+    <div class="setup-card">
+      <div class="eyebrow">Volume I</div>
+      <h2>Este Paiol ainda é exemplo.</h2>
+      <p>Pra começar o seu: põe o nome da fazenda.</p>
+      <form id="form-setup">
+        <label>Nome da fazenda <input id="boot-farm" required></label>
+        <label>Município <input id="boot-place"></label>
+        <label>Sobrenome <input id="boot-family"></label>
+        <button class="btn primary" type="submit">Abrir o meu álbum</button>
+        <button class="btn" id="btn-see-demo" type="button">Olhar o exemplo antes</button>
+      </form>
+    </div>
+  </div>
   <div class="modal" id="modal"></div>
   <div class="lightbox" id="lightbox"></div>
   <script src="app.js"></script>
