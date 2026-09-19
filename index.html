@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Paiol — o álbum da família na fazenda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rcsf6grrh6-sys/paiol@89c5de5856794787f14cce2a223efac281f3b8a1/styles.css">
 </head>
 <body>
   <header class="app-header">
@@ -51,9 +51,7 @@
           <li><strong>Pé no chão.</strong> Sai do capô.</li>
           <li><strong>Céu.</strong> Deixa horizonte.</li>
           <li><strong>Celular.</strong> Limpa a lente, desliga o modo retrato.</li>
-          <li><strong>Cinco fotos, uma capa.</strong></li>
         </ol>
-        <p class="rule">Legenda: ano, estação, quem tirou.</p>
       </article>
     </section>
     <section class="view" id="fazenda">
@@ -76,11 +74,11 @@
     </section>
     <section class="view" id="causos"><div class="section-head"><div class="eyebrow">O que a foto não conta</div><h2>Causos da casa.</h2></div><div id="stories"></div></section>
     <section class="view" id="guardar">
-      <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2></div>
+      <div class="section-head"><div class="eyebrow">Entrar no paiol</div><h2>Guarda uma foto agora.</h2><p>No iPhone: Foto → Escolher arquivo → Fototeca. Põe título. Aí Guardar.</p></div>
       <form class="add" id="add-photo">
         <label>Foto <input id="photo-file" type="file" accept="image/*" required></label>
-        <label>Título <input id="photo-title" type="text" required></label>
-        <label>Legenda <textarea id="photo-caption"></textarea></label>
+        <label>Título <input id="photo-title" type="text" placeholder="Ex.: Sede ao fim da tarde" required></label>
+        <label>Legenda <textarea id="photo-caption" placeholder="Ano, estação, quem tirou"></textarea></label>
         <label>Álbum <select id="photo-album"><option>A Sede</option><option>O Campo</option><option>A Mesa</option><option>Gente da casa</option></select></label>
         <label class="check"><input id="photo-cover" type="checkbox"> Usar como capa do livro</label>
         <button class="btn primary" type="submit">Guardar no paiol</button>
@@ -142,6 +140,6 @@
   </div>
   <div class="modal" id="modal"></div>
   <div class="lightbox" id="lightbox"></div>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rcsf6grrh6-sys/paiol@89c5de5856794787f14cce2a223efac281f3b8a1/app.js"></script>
 </body>
 </html>
